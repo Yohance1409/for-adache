@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        /* ===== BODY ===== */
         body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0d6efd, #0ea5e9, #38bdf8); /* bright blue gradient */
-    text-align: center;
-    color: #f0f9ff; /* soft white text for contrast */
-    overflow-x: hidden;
-}
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0d6efd, #0ea5e9, #38bdf8); /* bright blue gradient */
+            text-align: center;
+            color: #f0f9ff; /* soft white text for contrast */
+            overflow-x: hidden;
+        }
+
+        /* ===== PAGE SECTIONS ===== */
         .page {
             display: none;
             padding: 60px 20px;
@@ -30,27 +33,29 @@
         p {
             font-size: 18px;
             max-width: 600px;
-            margin: auto;
+            margin: 15px auto;
             line-height: 1.6;
         }
 
+        /* ===== BUTTONS ===== */
         button {
-    background-color: #0d6efd; /* bright blue button */
-    border: none;
-    padding: 15px 25px;
-    font-size: 18px;
-    color: #fff; /* white text */
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 25px;
-    transition: 0.3s;
-}
+            background-color: #0d6efd; /* bright blue button */
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: #fff; /* white text */
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
 
-button:hover {
-    background-color: #0b5ed7; /* darker blue hover */
-    transform: scale(1.05);
-}
+        button:hover {
+            background-color: #0b5ed7; /* darker blue hover */
+            transform: scale(1.05);
+        }
 
+        /* ===== BOXES ===== */
         .box-container {
             display: flex;
             flex-wrap: wrap;
@@ -60,34 +65,35 @@ button:hover {
         }
 
         .box {
-    background: #1e90ff; /* Dodger Blue - main box color */
-    padding: 30px;
-    width: 220px;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
+            background: #1e90ff; /* Dodger Blue - main box color */
+            padding: 30px;
+            width: 220px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
 
-.box:hover {
-    transform: translateY(-5px);
-    background: #63b3ed; /* lighter blue on hover */
-}
+        .box:hover {
+            transform: translateY(-5px);
+            background: #63b3ed; /* lighter blue on hover */
+        }
 
-
+        /* ===== CONTENT SECTIONS ===== */
         .content {
-    display: none;
-    margin-top: 40px;
-    background: #0ea5e9; /* Sky Blue / Teal - main content bg */
-    padding: 25px;
-    border-radius: 12px;
-    color: #f0f9ff; /* soft white text for readability */
-}
+            display: none;
+            margin-top: 40px;
+            background: #0ea5e9; /* Sky Blue / Teal - main content bg */
+            padding: 25px;
+            border-radius: 12px;
+            color: #f0f9ff; /* soft white text for readability */
+        }
 
         img {
-            width: 200px;
+            width: 250px;
             border-radius: 10px;
             margin: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         /* Floating Hearts */
@@ -163,35 +169,43 @@ setInterval(createHeart, 800);
         <img src="WhatsApp Image 2026-02-13 at 11.39.19 PM (1).jpeg">
         <img src="WhatsApp Image 2026-02-13 at 11.38.45 PM.jpeg">
         <img src="WhatsApp Image 2026-02-13 at 11.38.45 PM (1).jpeg">
-         <img src="WhatsApp Image 2026-02-13 at 11.38.42 PM.jpeg">
+        <img src="WhatsApp Image 2026-02-13 at 11.38.42 PM.jpeg">
     </div>
 
     <div id="letter" class="content">
-        <h2>To My Valantine</h2>
+        <h2>To My Valentine</h2>
         <p>
             Hey Baby,
-I wanted to take a moment to tell you how incredibly lucky i feel to have you in my life.
-I know this might not be the right time for this but yea it's been 5 months with you, yeahh we've come a long way.
-I’m so grateful for you, every moment we’ve shared, the laughter, the quite comfort of knowing we're each other's safe place.
-I can't wait to take all those photo's of you and make so much memories with you
-
-I love you, now and always.
-
-Your Sweet Face.💙
+        </p>
+        <p>
+            I wanted to take a moment to tell you how incredibly lucky I feel to have you in my life.
+        </p>
+        <p>
+            I know this might not be the right time for this but yea, it's been 5 months with you — yeah, we've come a long way.
+        </p>
+        <p>
+            I’m so grateful for you, every moment we’ve shared: the laughter, the quiet comfort of knowing we're each other's safe place.
+        </p>
+        <p>
+            I can't wait to take all those photos of you and make so many memories with you.
+        </p>
+        <p>
+            I love you, now and always.
+        </p>
+        <p>
+            Your Sweet Face. 💙
         </p>
     </div>
 
     <div id="love" class="content">
         <h2>Why I Love You</h2>
-        <p>
-        Because you make me feel safe.  
-        Because you choose me even on the hard days. 
-        Because being with you, even from afar feels like home.
-        You listen, really listen. it means everything.
-        Because of the care and attention you put into our conversations and our moments together.
-        Your'e my calm and my chaos at the same time.
-        You make my heart brighter just by being in it.
-        </p>
+        <p>Because you make me feel safe.</p>
+        <p>Because you choose me even on the hard days.</p>
+        <p>Because being with you, even from afar, feels like home.</p>
+        <p>You listen — really listen. It means everything.</p>
+        <p>Because of the care and attention you put into our conversations and our moments together.</p>
+        <p>You're my calm and my chaos at the same time.</p>
+        <p>You make my heart brighter just by being in it.</p>
     </div>
 
     <div id="song" class="content">
@@ -200,11 +214,12 @@ Your Sweet Face.💙
         src="https://music.youtube.com/watch?v=rknPueKvRg0&desc_update=1&si=VASSNw0aX4JRk8t7"
         frameborder="0" allowfullscreen></iframe>
     </div>
+
     <div id="best-photo" class="content">
-    <h2>My Favorite Photo of You 💖</h2>
-    <p>This is the one that makes my heart smile every time I see it and why i used iy for your contact DP.</p>
-    <img src="WhatsApp Image 2026-02-13 at 11.39.18 PM (1).jpeg" alt="My favorite photo of you" style="width:300px; border-radius:15px; box-shadow: 0 5px 20px rgba(0,0,0,0.5);">
-</div>
+        <h2>My Favorite Photo of You 💖</h2>
+        <p>This is the one that makes my heart smile every time I see it and why I used it for your contact DP.</p>
+        <img src="WhatsApp Image 2026-02-13 at 11.39.18 PM (1).jpeg" alt="My favorite photo of you" style="width:300px; border-radius:15px; box-shadow: 0 5px 20px rgba(0,0,0,0.5);">
+    </div>
 
 </div>
 
