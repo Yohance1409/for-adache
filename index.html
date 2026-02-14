@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Adache ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        .page {
+            display: none;
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: #c0392b;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #962d22;
+            transform: scale(1.05);
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .box {
+            background: #1c1c1c;
+            padding: 30px;
+            width: 220px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            background: #252525;
+        }
+
+        .content {
+            display: none;
+            margin-top: 40px;
+            background: #2a2a2a;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        /* Floating Hearts */
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            font-size: 18px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 800);
+</script>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+    <h1>Hey Adache 💙</h1>
+    <p>
+        I made something special just for you.  
+        Because no matter the distance, you mean so much to me.
+    </p>
+    <button onclick="nextPage()">Click Here 🎁</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+    <h1>Choose an envelope</h1>
+    <p>Explore the little things I love about us.</p>
+
+    <div class="box-container">
+        <div class="box" onclick="showContent('memories')">📸 Picture Memories</div>
+        <div class="box" onclick="showContent('letter')">💌 My Letter</div>
+        <div class="box" onclick="showContent('love')">❤️ Why I Love You</div>
+        <div class="box" onclick="showContent('song')">🎵 Our Song</div>
+    </div>
+
+    <!-- CONTENT SECTIONS -->
+
+    <div id="memories" class="content">
+        <h2>Our Memories</h2>
+        <p>Some of my favorite moments with you.</p>
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+    </div>
+
+    <div id="letter" class="content">
+        <h2>To My Valantine</h2>
+        <p>
+            Hey Baby,
+I wanted to take a moment to tell you how incredibly lucky i feel to have you in my life.
+I know this might not be the right time for this but yea it's been 5 months with you, yeahh we've come a long way.
+I’m so grateful for you, every moment we’ve shared, the laughter, the quite comfort of knowing we're each other's safe place.
+I can't wait to take all those photo's of you and make so much memories with you
+
+I love you, now and always.
+
+Your Sweet Face.💙
+        </p>
+    </div>
+
+    <div id="love" class="content">
+        <h2>Why I Love You</h2>
+        <p>
+        Because you make me feel safe.  
+        Because you choose me even on the hard days. 
+        Because being with you, even from afar feels like home.
+        You listen, really listen. it means everything.
+        Because of the care and attention you put into our conversations and our moments together.
+        Your'e my calm and my chaos at the same time.
+        You make my heart brighter just by being in it.
+        </p>
+    </div>
+
+    <div id="song" class="content">
+        <h2>This Song Reminds Me of You 🎵</h2>
+        <iframe width="300" height="200" 
+        src="https://music.youtube.com/watch?v=rknPueKvRg0"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function nextPage() {
+    document.getElementById('page1').classList.remove('active');
+    document.getElementById('page2').classList.add('active');
+}
+
+function showContent(id) {
+    let sections = document.querySelectorAll('.content');
+    sections.forEach(section => section.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
