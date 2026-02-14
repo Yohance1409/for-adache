@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        /* ===== BODY ===== */
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0d6efd, #0ea5e9, #38bdf8); /* bright blue gradient */
+            background: linear-gradient(135deg, #0d6efd, #0ea5e9, #38bdf8);
             text-align: center;
-            color: #f0f9ff; /* soft white text for contrast */
+            color: #f0f9ff;
             overflow-x: hidden;
         }
 
-        /* ===== PAGE SECTIONS ===== */
         .page {
             display: none;
             padding: 60px 20px;
@@ -37,13 +35,12 @@
             line-height: 1.6;
         }
 
-        /* ===== BUTTONS ===== */
         button {
-            background-color: #0d6efd; /* bright blue button */
+            background-color: #0d6efd;
             border: none;
             padding: 15px 25px;
             font-size: 18px;
-            color: #fff; /* white text */
+            color: #fff;
             border-radius: 8px;
             cursor: pointer;
             margin-top: 25px;
@@ -51,11 +48,10 @@
         }
 
         button:hover {
-            background-color: #0b5ed7; /* darker blue hover */
+            background-color: #0b5ed7;
             transform: scale(1.05);
         }
 
-        /* ===== BOXES ===== */
         .box-container {
             display: flex;
             flex-wrap: wrap;
@@ -65,7 +61,7 @@
         }
 
         .box {
-            background: #1e90ff; /* Dodger Blue - main box color */
+            background: #1e90ff;
             padding: 30px;
             width: 220px;
             border-radius: 12px;
@@ -76,24 +72,22 @@
 
         .box:hover {
             transform: translateY(-5px);
-            background: #63b3ed; /* lighter blue on hover */
+            background: #63b3ed;
         }
 
-        /* ===== CONTENT SECTIONS ===== */
         .content {
             display: none;
             margin-top: 40px;
-            background: #0ea5e9; /* Sky Blue / Teal - main content bg */
+            background: #0ea5e9;
             padding: 25px;
             border-radius: 12px;
-            color: #f0f9ff; /* soft white text for readability */
+            color: #f0f9ff;
         }
 
         img {
-            width: 250px;
+            width: 200px;
             border-radius: 10px;
             margin: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         /* Floating Hearts */
@@ -162,7 +156,6 @@ setInterval(createHeart, 800);
     </div>
 
     <!-- CONTENT SECTIONS -->
-
     <div id="memories" class="content">
         <h2>Our Memories</h2>
         <p>Some of my favorite moments with you.</p>
@@ -170,31 +163,19 @@ setInterval(createHeart, 800);
         <img src="WhatsApp Image 2026-02-13 at 11.38.45 PM.jpeg">
         <img src="WhatsApp Image 2026-02-13 at 11.38.45 PM (1).jpeg">
         <img src="WhatsApp Image 2026-02-13 at 11.38.42 PM.jpeg">
+        <button onclick="backToMenu()">⬅️ Back to Menu</button>
     </div>
 
     <div id="letter" class="content">
         <h2>To My Valentine</h2>
-        <p>
-            Hey Baby,
-        </p>
-        <p>
-            I wanted to take a moment to tell you how incredibly lucky I feel to have you in my life.
-        </p>
-        <p>
-            I know this might not be the right time for this but yea, it's been 5 months with you — yeah, we've come a long way.
-        </p>
-        <p>
-            I’m so grateful for you, every moment we’ve shared: the laughter, the quiet comfort of knowing we're each other's safe place.
-        </p>
-        <p>
-            I can't wait to take all those photos of you and make so many memories with you.
-        </p>
-        <p>
-            I love you, now and always.
-        </p>
-        <p>
-            Your Sweet Face. 💙
-        </p>
+        <p>Hey Baby,</p>
+        <p>I wanted to take a moment to tell you how incredibly lucky I feel to have you in my life.</p>
+        <p>I know this might not be the right time for this but yea, it's been 5 months with you — yeahh, we've come a long way.</p>
+        <p>I’m so grateful for you, every moment we’ve shared, the laughter, the quiet comfort of knowing we're each other's safe place.</p>
+        <p>I can't wait to take all those photos of you and make so many more memories with you.</p>
+        <p>I love you, now and always.</p>
+        <p>Your Sweet Face 💙</p>
+        <button onclick="backToMenu()">⬅️ Back to Menu</button>
     </div>
 
     <div id="love" class="content">
@@ -206,21 +187,27 @@ setInterval(createHeart, 800);
         <p>Because of the care and attention you put into our conversations and our moments together.</p>
         <p>You're my calm and my chaos at the same time.</p>
         <p>You make my heart brighter just by being in it.</p>
+        <button onclick="backToMenu()">⬅️ Back to Menu</button>
     </div>
 
     <div id="song" class="content">
         <h2>This Song Reminds Me of You 🎵</h2>
-        <iframe width="300" height="200" 
-        src="https://music.youtube.com/watch?v=rknPueKvRg0&desc_update=1&si=VASSNw0aX4JRk8t7"
-        frameborder="0" allowfullscreen></iframe>
+        <iframe id="songVideo" width="300" height="200" 
+            src="https://www.youtube.com/embed/rknPueKvRg0?enablejsapi=1" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        <button onclick="backToMenu()">⬅️ Back to Menu</button>
     </div>
 
     <div id="best-photo" class="content">
         <h2>My Favorite Photo of You 💖</h2>
         <p>This is the one that makes my heart smile every time I see it and why I used it for your contact DP.</p>
-        <img src="WhatsApp Image 2026-02-13 at 11.39.18 PM (1).jpeg" alt="My favorite photo of you" style="width:300px; border-radius:15px; box-shadow: 0 5px 20px rgba(0,0,0,0.5);">
+        <img src="WhatsApp Image 2026-02-13 at 11.39.18 PM (1).jpeg" 
+             alt="My favorite photo of you" 
+             style="width:300px; border-radius:15px; box-shadow: 0 5px 20px rgba(0,0,0,0.5);">
+        <button onclick="backToMenu()">⬅️ Back to Menu</button>
     </div>
-
 </div>
 
 <script>
@@ -230,9 +217,30 @@ function nextPage() {
 }
 
 function showContent(id) {
+    // Hide all sections
     let sections = document.querySelectorAll('.content');
     sections.forEach(section => section.style.display = 'none');
+
+    // Hide the menu
+    document.querySelector('.box-container').style.display = 'none';
+
+    // Show the selected section
     document.getElementById(id).style.display = 'block';
+
+    // Autoplay song if "song" section is opened
+    if(id === 'song') {
+        const songIframe = document.getElementById('songVideo');
+        songIframe.src = songIframe.src + "&autoplay=1";
+    }
+}
+
+function backToMenu() {
+    // Hide all content sections
+    let sections = document.querySelectorAll('.content');
+    sections.forEach(section => section.style.display = 'none');
+
+    // Show the menu (box-container)
+    document.querySelector('.box-container').style.display = 'flex';
 }
 </script>
 
